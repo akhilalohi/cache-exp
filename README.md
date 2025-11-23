@@ -43,7 +43,7 @@ cmake ..
 
 3. **Compile the Project**
 ```bash
-cmake --build .
+cmake --build . --config Release
 ```
 
 Upon successful compilation, the executable file will be located in the `build/bin/` folder.
