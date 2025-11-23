@@ -1,6 +1,4 @@
-# CacheIQ: A Trace-Driven CPU Cache Simulator
-
-## Overview
+# CacheIQ
 CacheIQ is a trace-driven CPU cache simulator written in modern C++. It allows computer science students and developers to study and analyze the behavior and performance impact of various cache designs and data access patterns.
 
 ## Specifications
