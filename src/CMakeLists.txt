@@ -8,6 +8,7 @@ set(SOURCE_FILES
 	MemorySystem.cpp
 	RandomNumberGenerator.cpp
 	ReplacementAlgorithms.cpp
+	CacheIQ.cpp
 )
 
 # Create Executable Target
