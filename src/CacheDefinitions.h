@@ -3,6 +3,7 @@
 #include <string>
 #include <array>
 #include <unordered_map>
+#include <algorithm>
 
 constexpr size_t INVALID_WAY_INDEX = 0xFFFFFFFF;
 constexpr size_t REPLACEMENT_ALGORITHMS_COUNT = 2;
@@ -61,8 +62,8 @@ struct CacheConfiguration
 {
   CacheConfiguration(size_t cacheSizeKB, size_t cacheLineSize,
     size_t cacheAssociativity, std::string& cacheReplacementAlgorithm)
-    : cacheSize(cacheSizeKB), lineSize(cacheLineSize),
-    wayCount(cacheAssociativity), replacementAlgorithm(cacheReplacementAlgorithm)
+    : cacheSize(cacheSizeKB), wayCount(cacheAssociativity),
+    lineSize(cacheLineSize), replacementAlgorithm(cacheReplacementAlgorithm)
   {
     // Calculate the number of sets in the cache
     setCount = (cacheSize * 1024) / (wayCount * cacheLineSize);

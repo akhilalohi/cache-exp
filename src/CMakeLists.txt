@@ -15,7 +15,7 @@ set(SOURCE_FILES
 add_executable(CacheIQ ${SOURCE_FILES})
 
 # Add Header Files to the Project Structure
-target_sources(CacheIQ PUBLIC
+target_include_directories(CacheIQ PRIVATE
 	Cache.h
 	CacheDefinitions.h
 	CacheStatistics.h

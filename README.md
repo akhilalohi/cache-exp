@@ -23,7 +23,7 @@ This section details the fixed and flexible design constraints of the simulator.
 To build and run this project, you need the following tools installed on your system:
 1. **Operating System**: Windows, macOS, or Linux.
 2. **C++ Compiler**: GCC, Clang, or MSVC (C++20 standard or newer).
-3. **CMake**: Version 4.2.0 or higher.
+3. **CMake**: Version 3.15 or higher.
 
 ### Build Instructions (Cross-Platform)
 The project uses CMake for cross-platform compilation.
