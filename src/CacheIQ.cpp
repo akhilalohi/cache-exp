@@ -179,6 +179,8 @@ int main(int argc, char* argv[])
         memory.Write(instructionIndex, instruction.memoryAddress, RandomNumberGenerator::GetRandom());
         break;
       }
+      default:
+        break;
     }
   }
 

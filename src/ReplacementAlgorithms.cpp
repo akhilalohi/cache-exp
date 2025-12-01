@@ -50,11 +50,13 @@ RandomReplacement::~RandomReplacement() {}
 void RandomReplacement::UpdateOnHit(uint32_t accessedWayIndex)
 {
   // No action needed on hit
+  (void)accessedWayIndex;
 }
 
 void RandomReplacement::UpdateOnMiss(uint32_t TargetWayIndex)
 {
   // No action needed on miss
+  (void)TargetWayIndex;
 }
 
 uint32_t RandomReplacement::GetVictim()

@@ -10,6 +10,7 @@ project(CacheIQ
 # Set C++ Standard
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Configure the build directory for a clean separation of files
 # This ensures executables and libraries go into standard locations

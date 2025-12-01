@@ -1,3 +1,4 @@
+#include <cstring>
 #include "MemorySystem.h"
 
 MemorySystem::MemorySystem(const CacheConfiguration& cacheConfiguration)
@@ -31,7 +32,7 @@ uint32_t MemorySystem::Read(size_t id, uint32_t address)
 
   // Convert the byte array (DataPacket) into a single 32-bit unsigned integer
   uint32_t value = 0x00000000;
-  std::memcpy(&value, dataPacket.data(), sizeof(uint32_t));
+  memcpy(&value, dataPacket.data(), sizeof(uint32_t));
 
   // Update statistics (data)
   instructionData.data = value;
@@ -45,7 +46,7 @@ void MemorySystem::Write(size_t id, uint32_t address, uint32_t value)
   uint32_t alignedAddress = address;
 
   // Convert the single 32-bit unsigned integer into a byte array (DataPacket)
-  std::memcpy(dataPacket.data(), &value, sizeof(uint32_t));
+  memcpy(dataPacket.data(), &value, sizeof(uint32_t));
 
   // Check if the given memory address needs to be aligned
   if (!IsAligned(address))

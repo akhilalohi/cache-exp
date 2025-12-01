@@ -13,17 +13,18 @@ void Logger::LogMessage(ELogLevel level, const char* format, ...)
   {
     va_list args;
     char formattedString[MAX_LOG_ENTRY_CHARS] = {};
-
-    std::stringstream stringStream = {};
-    stringStream << format << std::endl;
-
-    // Format the string with all the given arguments
+    
+  // Format the string with all the given arguments
     va_start(args, format);
-    vsprintf_s(formattedString, stringStream.str().c_str(), args);
+#ifdef _MSC_VER
+    vsprintf_s(formattedString, format, args);
+#else
+    vsnprintf(formattedString, MAX_LOG_ENTRY_CHARS, format, args);
+#endif
     va_end(args);
 
-    // Print the formatted string
-    std::cout << formattedString;
+  // Print the formatted string
+  std::cout << formattedString << std::endl;
   }
 }
 

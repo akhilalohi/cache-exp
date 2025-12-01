@@ -15,15 +15,4 @@ set(SOURCE_FILES
 add_executable(CacheIQ ${SOURCE_FILES})
 
 # Add Header Files to the Project Structure
-target_sources(CacheIQ PUBLIC
-	Cache.h
-	CacheDefinitions.h
-	CacheStatistics.h
-	CacheTrace.h
-	Logger.h
-	MainMemory.h
-	MemorySystem.h
-	RandomNumberGenerator.h
-	ReplacementAlgorithms.h
-	SystemDefinitions.h
-)
+target_include_directories(CacheIQ PRIVATE ${CMAKE_CURRENT_LIST_DIR})

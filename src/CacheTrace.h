@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <unordered_map>
+#include <cstdint>
 
 constexpr size_t MAX_INSTRUCTION_COUNT = 1048576;				// Maximum number of instructions in the trace
 constexpr size_t ENTRY_LENGTH = 12;											// The expected number of characters in a single trace entry
